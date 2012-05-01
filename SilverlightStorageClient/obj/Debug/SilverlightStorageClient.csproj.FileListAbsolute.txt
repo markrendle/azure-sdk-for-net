@@ -1,0 +1,4 @@
+D:\Code\azure-sdk-for-net\SilverlightStorageClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Code\azure-sdk-for-net\SilverlightStorageClient\obj\Debug\SilverlightStorageClient.SR.resources
+D:\Code\azure-sdk-for-net\SilverlightStorageClient\obj\Debug\GenerateResource.read.1.tlog
+D:\Code\azure-sdk-for-net\SilverlightStorageClient\obj\Debug\GenerateResource.write.1.tlog

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C0D9BEC-043F-4ECC-AE08-AA8216F32433}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SilverlightStorageClient</RootNamespace>
+    <AssemblyName>SilverlightStorageClient</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CloudStorageAccount.cs" />
+    <Compile Include="MutableStorageCredentials.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedAccessSignatureHelper.cs" />
+    <Compile Include="SR.Designer.cs" />
+    <Compile Include="StorageClient\AccessCondition.cs" />
+    <Compile Include="StorageClient\BlobAttributes.cs" />
+    <Compile Include="StorageClient\BlobContainerAttributes.cs" />
+    <Compile Include="StorageClient\BlobContainerPermissions.cs" />
+    <Compile Include="StorageClient\BlobContainerProperties.cs" />
+    <Compile Include="StorageClient\BlobContainerPublicAccessType.cs" />
+    <Compile Include="StorageClient\BlobErrorCodeStrings.cs" />
+    <Compile Include="StorageClient\BlobListingDetails.cs" />
+    <Compile Include="StorageClient\BlobProperties.cs" />
+    <Compile Include="StorageClient\BlobReadStream.cs" />
+    <Compile Include="StorageClient\BlobRequestOptions.cs" />
+    <Compile Include="StorageClient\BlobStream.cs" />
+    <Compile Include="StorageClient\BlobType.cs" />
+    <Compile Include="StorageClient\BlobWriteStream.cs" />
+    <Compile Include="StorageClient\BlockListingFilter.cs" />
+    <Compile Include="StorageClient\CloudBlob.cs" />
+    <Compile Include="StorageClient\CloudBlobClient.cs" />
+    <Compile Include="StorageClient\CloudBlobContainer.cs" />
+    <Compile Include="StorageClient\CloudBlobDirectory.cs" />
+    <Compile Include="StorageClient\CloudBlockBlob.cs" />
+    <Compile Include="StorageClient\CloudPageBlob.cs" />
+    <Compile Include="StorageClient\CloudQueue.cs" />
+    <Compile Include="StorageClient\CloudQueueClient.cs" />
+    <Compile Include="StorageClient\CloudQueueMessage.cs" />
+    <Compile Include="StorageClient\CloudStorageAccountStorageClientExtensions.cs" />
+    <Compile Include="StorageClient\CloudTableClient.cs" />
+    <Compile Include="StorageClient\CloudTableQuery.cs" />
+    <Compile Include="StorageClient\CommonUtils.cs" />
+    <Compile Include="StorageClient\ContainerListingDetails.cs" />
+    <Compile Include="StorageClient\DeleteSnapshotsOption.cs" />
+    <Compile Include="StorageClient\EventHelper.cs" />
+    <Compile Include="StorageClient\IListBlobItem.cs" />
+    <Compile Include="StorageClient\LeaseStatus.cs" />
+    <Compile Include="StorageClient\ListBlockItem.cs" />
+    <Compile Include="StorageClient\MessageUpdateFields.cs" />
+    <Compile Include="StorageClient\NavigationHelper.cs" />
+    <Compile Include="StorageClient\PageRange.cs" />
+    <Compile Include="StorageClient\ParallelUpload.cs" />
+    <Compile Include="StorageClient\ProtocolHelper.cs" />
+    <Compile Include="StorageClient\Protocol\AccessPolicyResponse.cs" />
+    <Compile Include="StorageClient\Protocol\BlobContainerEntry.cs" />
+    <Compile Include="StorageClient\Protocol\BlobEntry.cs" />
+    <Compile Include="StorageClient\Protocol\BlobListingContext.cs" />
+    <Compile Include="StorageClient\Protocol\BlobPrefixEntry.cs" />
+    <Compile Include="StorageClient\Protocol\BlobRequest.cs" />
+    <Compile Include="StorageClient\Protocol\BlobResponse.cs" />
+    <Compile Include="StorageClient\Protocol\BlockSearchMode.cs" />
+    <Compile Include="StorageClient\Protocol\CanonicalizationStrategy.cs" />
+    <Compile Include="StorageClient\Protocol\CanonicalizationStrategyFactory.cs" />
+    <Compile Include="StorageClient\Protocol\CanonicalizedString.cs" />
+    <Compile Include="StorageClient\Protocol\ConditionHeaderKind.cs" />
+    <Compile Include="StorageClient\Protocol\Constants.cs" />
+    <Compile Include="StorageClient\Protocol\ContainerRequest.cs" />
+    <Compile Include="StorageClient\Protocol\ContainerResponse.cs" />
+    <Compile Include="StorageClient\Protocol\Credentials.cs" />
+    <Compile Include="StorageClient\Protocol\GetBlockListResponse.cs" />
+    <Compile Include="StorageClient\Protocol\GetMessagesResponse.cs" />
+    <Compile Include="StorageClient\Protocol\GetPageRangesResponse.cs" />
+    <Compile Include="StorageClient\Protocol\IListBlobEntry.cs" />
+    <Compile Include="StorageClient\Protocol\LeaseAction.cs" />
+    <Compile Include="StorageClient\Protocol\ListBlobsResponse.cs" />
+    <Compile Include="StorageClient\Protocol\ListContainersResponse.cs" />
+    <Compile Include="StorageClient\Protocol\ListingContext.cs" />
+    <Compile Include="StorageClient\Protocol\ListQueuesResponse.cs" />
+    <Compile Include="StorageClient\Protocol\LoggingOperations.cs" />
+    <Compile Include="StorageClient\Protocol\LoggingProperties.cs" />
+    <Compile Include="StorageClient\Protocol\MetricsLevel.cs" />
+    <Compile Include="StorageClient\Protocol\MetricsProperties.cs" />
+    <Compile Include="StorageClient\Protocol\PageWrite.cs" />
+    <Compile Include="StorageClient\Protocol\ParseExtensions.cs" />
+    <Compile Include="StorageClient\Protocol\PeekMessagesResponse.cs" />
+    <Compile Include="StorageClient\Protocol\PutBlockListItem.cs" />
+    <Compile Include="StorageClient\Protocol\PutPageProperties.cs" />
+    <Compile Include="StorageClient\Protocol\QueueEntry.cs" />
+    <Compile Include="StorageClient\Protocol\QueueMessage.cs" />
+    <Compile Include="StorageClient\Protocol\QueueRequest.cs" />
+    <Compile Include="StorageClient\Protocol\QueueResponse.cs" />
+    <Compile Include="StorageClient\Protocol\Request.cs" />
+    <Compile Include="StorageClient\Protocol\ResourceConsumedException.cs" />
+    <Compile Include="StorageClient\Protocol\Response.cs" />
+    <Compile Include="StorageClient\Protocol\ResponseParsingBase.cs" />
+    <Compile Include="StorageClient\Protocol\ServiceProperties.cs" />
+    <Compile Include="StorageClient\Protocol\SharedKeyCanonicalizer.cs" />
+    <Compile Include="StorageClient\Protocol\SharedKeyLiteCanonicalizer.cs" />
+    <Compile Include="StorageClient\Protocol\SharedKeyLiteTableCanonicalizer.cs" />
+    <Compile Include="StorageClient\Protocol\SharedKeyTableCanonicalizer.cs" />
+    <Compile Include="StorageClient\Protocol\StorageKey.cs" />
+    <Compile Include="StorageClient\Protocol\TableRequest.cs" />
+    <Compile Include="StorageClient\Protocol\TableResponse.cs" />
+    <Compile Include="StorageClient\Protocol\UriQueryBuilder.cs" />
+    <Compile Include="StorageClient\QueueAttributes.cs" />
+    <Compile Include="StorageClient\QueueErrorCodeStrings.cs" />
+    <Compile Include="StorageClient\QueueListingDetails.cs" />
+    <Compile Include="StorageClient\RequestWithRetry.cs" />
+    <Compile Include="StorageClient\ResponseReceivedEventArgs.cs" />
+    <Compile Include="StorageClient\ResultContinuation.cs" />
+    <Compile Include="StorageClient\ResultPagination.cs" />
+    <Compile Include="StorageClient\ResultSegment.cs" />
+    <Compile Include="StorageClient\RetryPolicies.cs" />
+    <Compile Include="StorageClient\RetryPolicy.cs" />
+    <Compile Include="StorageClient\SharedAccessPermissions.cs" />
+    <Compile Include="StorageClient\SharedAccessPolicies.cs" />
+    <Compile Include="StorageClient\SharedAccessPolicy.cs" />
+    <Compile Include="StorageClient\ShouldRetry.cs" />
+    <Compile Include="StorageClient\SmallBlockMemoryStream.cs" />
+    <Compile Include="StorageClient\StorageClientException.cs" />
+    <Compile Include="StorageClient\StorageErrorCode.cs" />
+    <Compile Include="StorageClient\StorageErrorCodeStrings.cs" />
+    <Compile Include="StorageClient\StorageException.cs" />
+    <Compile Include="StorageClient\StorageExceptionExtensions.cs" />
+    <Compile Include="StorageClient\StorageExtendedErrorInformation.cs" />
+    <Compile Include="StorageClient\StorageServerException.cs" />
+    <Compile Include="StorageClient\StreamUtilities.cs" />
+    <Compile Include="StorageClient\TableErrorCodeStrings.cs" />
+    <Compile Include="StorageClient\TableServiceContext.cs" />
+    <Compile Include="StorageClient\TableServiceEntity.cs" />
+    <Compile Include="StorageClient\TableServiceExtensionMethods.cs" />
+    <Compile Include="StorageClient\TableServiceTable.cs" />
+    <Compile Include="StorageClient\TableServiceUtilities.cs" />
+    <Compile Include="StorageClient\TaskImplHelper.cs" />
+    <Compile Include="StorageClient\Tasks\APMTask.cs" />
+    <Compile Include="StorageClient\Tasks\AsyncResultExtensions.cs" />
+    <Compile Include="StorageClient\Tasks\DelayTask.cs" />
+    <Compile Include="StorageClient\Tasks\InvokeTaskSequenceTask.cs" />
+    <Compile Include="StorageClient\Tasks\ITask.cs" />
+    <Compile Include="StorageClient\Tasks\NullTaskReturn.cs" />
+    <Compile Include="StorageClient\Tasks\RaceTask.cs" />
+    <Compile Include="StorageClient\Tasks\StreamExtensions.cs" />
+    <Compile Include="StorageClient\Tasks\SynchronousTask.cs" />
+    <Compile Include="StorageClient\Tasks\TableServiceExtensions.cs" />
+    <Compile Include="StorageClient\Tasks\Task.cs" />
+    <Compile Include="StorageClient\Tasks\TaskAsyncResult.cs" />
+    <Compile Include="StorageClient\Tasks\TimeoutHelper.cs" />
+    <Compile Include="StorageClient\Tasks\WebRequestExtensions.cs" />
+    <Compile Include="StorageClient\TraceHelper.cs" />
+    <Compile Include="StorageClient\Utilities.cs" />
+    <Compile Include="StorageCredentials.cs" />
+    <Compile Include="StorageCredentialsAccountAndKey.cs" />
+    <Compile Include="StorageCredentialsAnonymous.cs" />
+    <Compile Include="StorageCredentialsSharedAccessSignature.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SR.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
